@@ -1,6 +1,6 @@
 # 입력 (input)
 # 주의) 사용자 입력은 항상 "문자열"
-# 형식 : 변수 = inpu("안내문구: ")
+# 형식 : 변수 = input("안내문구: ")
 # name = input("이름: ")
 # age = input("나이: ")
 # print(name)
