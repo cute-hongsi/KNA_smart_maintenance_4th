@@ -16,6 +16,32 @@
 # text = 'PUMP A 03'
 # print(text.split())
 
-text = 'a,b,c,d'
+# text = 'a,b,c,d'
 # print(text.split(','))
-print(text.split(',',1))
+# print(text.split(',',1))
+
+#join - 합치기 (리스트 -> 문자열)
+# 형식 : '구분자'.jion(리스트) *구분자가 앞에 옴
+# print('-'.join(['2025','01','15']))
+
+#split + join
+# - split: 문자열 -> 리스트
+# - join : 리스트 -> 문자열
+# raw = '사과, 배, 감'
+# p = raw.split(',')
+# print(p)                #['사과', ' 배', ' 감']
+# print('/'.join(p))      #사과/ 배/ 감
+# print('/'.join([p[0].strip(),p[1].strip(),p[2].strip()]))   #사과/배/감 <-sptrip과 index를 사용해 공백 제거
+
+# print('-'.join(['2025','01','15']))
+
+# print('2025','1','15',sep='-')
+# print('2025','1','15',sep=',')
+
+# raw = '2025/01/15'
+# p= raw.split('/')
+# print('-'.join(p))
+
+raw = '1,NORMAL,25.3'
+p = raw.split(',')
+print(p[1].strip().lower())
