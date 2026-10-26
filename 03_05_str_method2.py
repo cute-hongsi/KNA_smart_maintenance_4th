@@ -31,7 +31,7 @@
 # p = raw.split(',')
 # print(p)                #['사과', ' 배', ' 감']
 # print('/'.join(p))      #사과/ 배/ 감
-# print('/'.join([p[0].strip(),p[1].strip(),p[2].strip()]))   #사과/배/감 <-sptrip과 index를 사용해 공백 제거
+# print('/'.join([p[0].strip(),p[1].strip(),p[2].strip()]))   #사과/배/감 <-strip과 index를 사용해 공백 제거
 
 # print('-'.join(['2025','01','15']))
 
