@@ -28,4 +28,4 @@ for i in range(n):
 
     if value >= 80:
         count += 1
-print("초과개수:",count)
+print("초과개수:5",count)
