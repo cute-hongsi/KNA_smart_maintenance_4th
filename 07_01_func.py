@@ -12,9 +12,18 @@
 # greet()
 
 # 실습 1
-def greet():
-    print("점검을 시작합니다")
-greet()
+# def greet():
+#     print("점검을 시작합니다")
+# greet()
 
-greet()
-greet()
+# greet()
+# greet()
+
+# 실습 2
+def check():
+    print("점검을 시작합니다")
+    print("측정을 시작합니다")
+    print("기록을 시작합니다")
+
+check()
+check()
