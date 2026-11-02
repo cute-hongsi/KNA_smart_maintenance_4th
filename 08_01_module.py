@@ -68,13 +68,10 @@
 # import os
 # import datetime
 
-# path = "data"
-# file = os.listdir(path)
-# count = len(file)
-
+# file = os.listdir("data")
 # now = datetime.datetime.now()
 
-# print(f"파일 {count}개, 점검 시각 {now}")
+# print(f"파일 {len(file)}개, 점검 시각 {now}")
 
 
 # 실습 6

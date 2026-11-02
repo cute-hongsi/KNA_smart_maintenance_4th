@@ -34,19 +34,41 @@ with open("data/test.txt", "r", encoding="utf-8") as f:
     print(f.read())
 '''
 
+'''
 # csv.reader
 import csv
 with open(FILE, "r", encoding="utf-8") as f:
     reader = csv.reader(f)
     for row in reader:
         print(row)
-
+'''
 # csv.wrtier
-with open("data/08_summary.csv","w", encoding="utf-8", newline="") as f:
-    writer = csv.writer(f)
-    writer.writerow(["설비ID", "상태"])     # 헤더
-    writer.writerow(["PRESS-01","1"])
-    writer.writerow(["PRESS-02","1"])
+# import csv
+# with open("data/08_summary.csv","w", encoding="utf-8", newline="") as f:
+#     writer = csv.writer(f)
+#     writer.writerow(["설비ID", "상태"])     # 헤더
+#     writer.writerow(["PRESS-01","1"])
+#     writer.writerow(["PRESS-02","1"])
 
-with open("data/08_summary.csv","r", encoding="utf-8") as f:
-    print(f.read())
+# with open("data/08_summary.csv","r", encoding="utf-8") as f:
+#     print(f.read())
+
+# 실습 6
+import csv
+new = []
+with open("data/08_press_13_261029_3.csv","r", encoding="utf-8") as f:
+    # 헤더 값 건너띄기
+    reader = csv.reader(f)
+    header = next(reader)
+    # 전류값 기준 90 초과 값만 새로운 리스트에 담기
+    for row in reader:
+        current = float(row[4])
+        if current > 90:
+            new.append(row)
+
+# 조건 맞는 데이터를 새로운 csv로 저장
+with open ("data/08_current_over90.csv", "w", encoding="utf-8", newline="") as f:
+    wrtier = csv.writer(f)
+    wrtier.writerow(header)
+    wrtier.writerows(new)
+print("저장된 행 수:", len(new))
