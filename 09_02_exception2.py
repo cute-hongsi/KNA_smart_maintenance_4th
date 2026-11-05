@@ -43,6 +43,7 @@ for line in rows:
 print("합계:", round(total,1), "/건너뜀", skipped)
 '''
 
+'''
 # 실습 2
 try:
     with open("data/09_ict_inspection_dirty.csv", "r", encoding="utf-8") as f:
@@ -61,3 +62,19 @@ for line in rows:
         pass
     # 실습 2번 pass 사용 / 실습 3번 skippes+= 1 , continue 사용
 print("합계:", round(total,1),"/유효:",valid,"/제외:",len(rows)-valid)
+'''
+
+# 실습 5
+def check_value(text,lo=0.0, hi=5000.0):
+    v = float(text)
+
+    # TODO : 범위 밖이면 ValueError발생
+    if not (lo <= v <= hi):
+        raise ValueError(f"정상 범위 밖: {v}")
+    return v
+
+for t in ["128.5", "결측", "999"]:
+    try:
+        print("통과:", check_value(t))
+    except ValueError as e:
+        print("제외:", e)
