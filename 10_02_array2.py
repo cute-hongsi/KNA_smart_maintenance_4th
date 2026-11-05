@@ -6,17 +6,28 @@ import numpy as np
 # print(a[1:4])
 # print(a[::2])
 
-# 실습 1
-# rpm = np.array([4603, 4720, 4650, 4800, 4550,
-#                    4700, 4900, 4620, 4750, 4603])
-# print(rpm[0])
-# print(rpm[-1])
-# print(rpm[1:4])
-# print(rpm[0:10:2])
+# 배열 연산
+a = np.array([1,2,3])
+b = np.array([10,20,30])
+print(a+b)
+# 같은 위치 값끼리 계산(반복문 필요x)
+# 사칙 연산 모두 같은 방식으로 계산
 
-# 실습 2
-data = np.array([[4603,2],[58,5],
-                 [1216,1],[4967,21]])
-print(data[2])
-print(data[:,0])
-print(data[:,1])
+# 스칼라 연산
+# - 숫자 하나를 배열 전체에 적용, 크기를 맞출 필요가 없다
+# - 연산 숫자는 수학과 같아 곱하기 먼저
+print(a*10+3)
+
+# 브로드캐스팅
+table = np.array([[72,2.4],[95,6.8]])
+print(table.shape)
+base = np.array([70,2.0])
+print(table-base)
+
+
+# 파일에서 배열로 불러오기(np.loadtxt)
+rpm = np.loadtxt('data/10_mct_tool.csv',
+                 delimiter=",",     # 값을 나누는 기호
+                 skiprows = 1,      # 첫 줄(제목)은 건너뜀
+                 usecols = 4)       # 5번째 열 = 회전수
+print(rpm)
