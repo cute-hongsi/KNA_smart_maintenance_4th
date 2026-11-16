@@ -38,3 +38,10 @@ q1, q3 = np.percentile(vib_s, [25,75])
 iqr = q3- q1
 upper = q3 + 1.5 * iqr
 print(vib_s[vib_s > upper])
+
+# 평균/표준편차로 정규화 z-score
+# - 부호의 의미 : 양수는 평균보다 위, 음수는 아래
+# - 방향을 무시하고 크기만 보려면 절댓값 필요
+
+z = (vib_s - np.mean(vib_s)) / np.std(vib_s)
+print(vib_s[np.abs(z) > 2])

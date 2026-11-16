@@ -1,7 +1,7 @@
 import numpy as np
 
 F = 'data/11_diecasting_series.csv'
-
+'''
 # ct = np.genfromtxt(F, delimiter=",",skip_header=1, usecols=1)
 # print(ct.shape, ct.dtype)
 
@@ -19,3 +19,10 @@ print(vib[pick])
 
 print(np.sort(vib))
 print(np.argsort(vib))
+'''
+
+# diff
+vib = np.array([2.0, 2.1, 2.2, 7.0, 7.1])
+change = np.diff(vib)
+print(np.round(change,1))
+print(np.argmax(change))
