@@ -44,6 +44,11 @@ import numpy as np
 
 # 실습 5
 # 파일에서 배열로 불러오기(np.loadtxt)
+# tq = np.array([2, 2, 21, 2, 3, 2, 2, 3, 2, 147])
+# high = tq > 10
+# print(high.sum())   # 2
+# print(round(high.mean(), 2))    # 0.2
+
 
 # 실습 6
 # sensor = np.array([[4600, 30], [4700, 35], [4500, 28], [4800, 40]])
@@ -70,12 +75,12 @@ import numpy as np
 # print(high.size, round(high.mean(), 1))
 
 # 실습 9
-rpm_tq = np.loadtxt('data/10_mct_tool.csv',
-                 delimiter=",",
-                 skiprows=1,
-                 usecols=(4,5))
-rpm = data[:,0]
-print(rpm_tq.shape, rpm_tq.dtype)
-low = rpm[rpm < 2000]
-print(low.size, round(low.mean(),1))
-print(round(rpm.mean(),1))
+# rpm_tq = np.loadtxt('data/10_mct_tool.csv',
+#                  delimiter=",",
+#                  skiprows=1,
+#                  usecols=(4,5))
+# rpm = data[:,0]
+# print(rpm_tq.shape, rpm_tq.dtype)
+# low = rpm[rpm < 2000]
+# print(low.size, round(low.mean(),1))
+# print(round(rpm.mean(),1))
